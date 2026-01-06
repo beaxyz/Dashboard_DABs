@@ -761,61 +761,6 @@
             "width": 2,
             "height": 1
           }
-        },
-        {
-          "widget": {
-            "name": "total-revenue-by-route",
-            "queries": [
-              {
-                "name": "main_query",
-                "query": {
-                  "datasetName": "0ca96e81",
-                  "fields": [
-                    {
-                      "name": "Route",
-                      "expression": "`Route`"
-                    },
-                    {
-                      "name": "sum(Total Revenue)",
-                      "expression": "SUM(`Total Revenue`)"
-                    }
-                  ],
-                  "disaggregated": false
-                }
-              }
-            ],
-            "spec": {
-              "version": 3,
-              "widgetType": "bar",
-              "encodings": {
-                "x": {
-                  "fieldName": "Route",
-                  "scale": {
-                    "type": "categorical",
-                    "sort": {
-                      "by": "y-reversed"
-                    }
-                  }
-                },
-                "y": {
-                  "fieldName": "sum(Total Revenue)",
-                  "scale": {
-                    "type": "quantitative"
-                  }
-                }
-              },
-              "frame": {
-                "title": "Total Revenue by Route",
-                "showTitle": true
-              }
-            }
-          },
-          "position": {
-            "x": 0,
-            "y": 14,
-            "width": 6,
-            "height": 7
-          }
         }
       ],
       "pageType": "PAGE_TYPE_CANVAS"
