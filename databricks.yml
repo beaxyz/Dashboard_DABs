@@ -1,0 +1,38 @@
+bundle:
+  name: dashboard_nyc_taxi
+
+include:
+  - resources/*.yml
+
+variables:
+  warehouse_id:
+    description: "SQL Warehouse ID for dashboards"
+
+targets:
+  dev:
+    default: true
+    mode: development
+
+    workspace:
+      host: https://e2-demo-field-eng.cloud.databricks.com
+      profile: e2-demo-field-eng
+
+    variables:
+      warehouse_id: 4b9b953939869799
+
+    permissions:
+        - level: CAN_MANAGE
+          user_name: beatrice.liew@databricks.com
+
+  prod:
+
+    mode: production
+
+    workspace:
+      host: https://adb-2548836972759138.18.azuredatabricks.net
+      profile: logfood
+      root_path: /Workspace/Users/beatrice.liew@databricks.com/.bundle/dashboard_nyc_taxi/prod
+      
+    variables:
+      warehouse_id: 17da2cff19003068
+

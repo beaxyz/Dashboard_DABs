@@ -1,0 +1,6 @@
+resources:
+  dashboards:
+    dev_beatrice_liew_nyc_taxi_trip_analysis:
+      display_name: "NYC Taxi Trip Analysis"
+      warehouse_id: 4b9b953939869799
+      file_path: ../src/dev_beatrice_liew_nyc_taxi_trip_analysis.lvdash.json
